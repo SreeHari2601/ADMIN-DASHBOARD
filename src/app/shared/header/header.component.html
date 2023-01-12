@@ -1,0 +1,33 @@
+<mat-toolbar color="primary">
+  <button (click)="toggle()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>Argentina FC</span>
+  <span class="example-spacer"></span>
+  <div fxFlex fxLayout="Row" fxLayoutAlign="flex-end">
+    <ul fxLayout="Row" fxLayoutGap="20px">
+      <li>
+        <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+          <mat-icon color="Warn">settings</mat-icon>
+        </button>
+      </li>
+      <li>
+        <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+          <mat-icon color="Warn">help_outline</mat-icon>
+        </button>
+      </li>
+      <li id="last">
+        <button mat-button [matMenuTriggerFor]="menu"><button mat-icon-button class="example-icon favorite-icon"
+            aria-label="Example icon-button with heart icon">
+            <mat-icon color="Warn">person_outline</mat-icon>
+          </button></button>
+        <mat-menu #menu="matMenu">
+
+          <button mat-menu-item>
+            <mat-icon color="Warn">exit_to_app</mat-icon>Sign Out
+          </button>
+        </mat-menu>
+      </li>
+    </ul>
+  </div>
+</mat-toolbar>
